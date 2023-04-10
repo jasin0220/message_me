@@ -1,0 +1,19 @@
+<div class="ui massive  inverted menu">
+  <div class="ui container">
+    <a class="active item">
+      <%= link_to "Chatroom", root_path, class:"item"%>
+    </a>
+    <a class="item">
+      Messages
+    </a>
+    <div class="right menu">
+      <% if logged_in? %>
+        <%= link_to "Logout", logout_path, method: :delete, class:"item" %>
+      <% else %>
+        <%= link_to "Login", "/login", class:"item" %>
+        <%= link_to "Signup", "/signup", class:"item" %>
+      <%end%>
+    </div>
+  </div>
+</div>
+</div>
